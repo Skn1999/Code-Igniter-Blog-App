@@ -1,0 +1,1 @@
+<h2 class="mt-5"><?= $title ?></h2>
