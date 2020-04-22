@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CI Blog</title>
-    <link rel="stylesheet" href="<?php echo base_url(); ?>css/bootstrap.min.css">
-    <link rel="stylesheet" href="<?php echo base_url(); ?>css/styles.css">
-
+    <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/styles.css">
+    <script src="https://cdn.ckeditor.com/4.14.0/standard/ckeditor.js"></script>
 </head>
 <body>
     
@@ -29,6 +29,9 @@
             <a class="nav-link" href="<?php echo base_url(); ?>posts">Blog</a>
         </li>
         </ul>
+        <div class="nav navbar-nav navbar-right">
+            <a class="btn btn-primary" href="<?php echo base_url(); ?>posts/create">Create Post</a>
+        </div>
     </div>
   </div>
 </nav>
