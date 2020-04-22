@@ -40,11 +40,12 @@ class Posts extends CI_Controller{
             $this->load->view("templates/footer");
         }            
         else{
-            $config['upload_path'] = "/assets/images/posts";
+            //upload image
+            $config['upload_path'] = "./assets/images/posts";
             $config['allowed_types'] = "jpg|gif|png|jpeg";
             $config['max_size'] = "1024";
-            $config['max_width'] = "500";
-            $config["max_height"] = "500";
+            $config['max_width'] = "1200";
+            $config["max_height"] = "1200";
 
             $this->load->library('upload', $config);
 
