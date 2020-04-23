@@ -28,9 +28,13 @@
         <li class="nav-item">
             <a class="nav-link" href="<?php echo base_url(); ?>posts">Blog</a>
         </li>
+        <li class="nav-item">
+            <a class="nav-link" href="<?php echo base_url(); ?>categories">Categories</a>
+        </li>
         </ul>
         <div class="nav navbar-nav navbar-right">
-            <a class="btn btn-primary" href="<?php echo base_url(); ?>posts/create">Create Post</a>
+            <a class=" btn btn-link" href="<?php echo site_url(); ?>categories/create">Create Category</a>
+            <a class="ml-2 btn btn-primary" href="<?php echo base_url(); ?>posts/create">Create Post</a>
         </div>
     </div>
   </div>

@@ -54,7 +54,13 @@ $route['posts/edit/(:any)'] = '/posts/edit/$1';
 $route["posts/update"] = "/posts/update";
 $route['posts/(:any)'] = "posts/view/$1";
 $route["posts"] = "posts/index";
+
 $route['default_controller'] = 'pages/view';
+
+$route['categories'] = "categories/index";
+$route['categories/create'] = "categories/create";
+$route['categories/posts/(:any)'] = "categories/posts/$1";
+
 $route['(:any)'] = 'pages/view/$1';   //$1 represents anything
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
