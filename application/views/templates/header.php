@@ -33,9 +33,11 @@
         </li>
         </ul>
         <div class="nav navbar-nav navbar-right">
+            <a class=" btn btn-primary" href="<?php echo site_url(); ?>users/login">Login</a>
             <a class=" btn btn-link" href="<?php echo site_url(); ?>users/register">Register</a>
             <a class=" btn btn-link" href="<?php echo site_url(); ?>categories/create">Create Category</a>
             <a class="ml-2 btn btn-primary" href="<?php echo base_url(); ?>posts/create">Create Post</a>
+            <a class="ml-2 btn btn-link" href="<?php echo base_url(); ?>users/logout">Log out</a>
         </div>
     </div>
   </div>
@@ -61,4 +63,16 @@
 
  <?php if($this->session->flashdata("category_created")): 
     echo "<p class='mt-2 alert alert-success'>".$this->session->flashdata("category_created")."</p>";
+ endif;?>
+
+<?php if($this->session->flashdata("login_failed")): 
+    echo "<p class='mt-2 alert alert-danger text-center'>".$this->session->flashdata("login_failed")."</p>";
+ endif;?>
+
+<?php if($this->session->flashdata("user_loggedin")): 
+    echo "<p class='mt-2 alert alert-success'>".$this->session->flashdata("user_loggedin")."</p>";
+ endif;?>
+
+ <?php if($this->session->flashdata("logged_out")): 
+    echo "<p class='mt-2 alert alert-success'>".$this->session->flashdata("logged_out")."</p>";
  endif;?>

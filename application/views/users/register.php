@@ -1,4 +1,3 @@
-<h2 class="mt-5"><?= $title; ?></h2>
 
 <?php if(validation_errors()): ?>
 <div class="alert alert-danger">
@@ -7,6 +6,10 @@
 <?php endif; ?>
 
 <?php echo form_open("users/register"); ?>
+<div class="row">
+    <div class="col-md-4 offset-md-4">
+    <h2 class="text-center mt-5"><?= $title; ?></h2>
+
     <div class="form-group">
         <label for="name">Name</label>
         <input type="text" class="form-control" name="name" placeholder="Enter name">
@@ -31,6 +34,7 @@
         <input type="password" class="form-control" name="password2" placeholder="Confirm your password">
     </div>
 
-    <button type="submit" class="btn btn-primary">Register</button>
-
+    <button type="submit" class="btn btn-primary btn-block">Register</button>
+    </div>
+    </div>
 </form>
