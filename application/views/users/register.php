@@ -1,8 +1,10 @@
 <h2 class="mt-5"><?= $title; ?></h2>
 
+<?php if(validation_errors()): ?>
 <div class="alert alert-danger">
     <?php echo validation_errors(); ?>
 </div>
+<?php endif; ?>
 
 <?php echo form_open("users/register"); ?>
     <div class="form-group">

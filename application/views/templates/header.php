@@ -33,6 +33,7 @@
         </li>
         </ul>
         <div class="nav navbar-nav navbar-right">
+            <a class=" btn btn-link" href="<?php echo site_url(); ?>users/register">Register</a>
             <a class=" btn btn-link" href="<?php echo site_url(); ?>categories/create">Create Category</a>
             <a class="ml-2 btn btn-primary" href="<?php echo base_url(); ?>posts/create">Create Post</a>
         </div>
@@ -41,3 +42,23 @@
 </nav>
 
 <div class="container">
+
+<?php if($this->session->flashdata("user_registered")): 
+    echo "<p class='mt-2 alert alert-success'>".$this->session->flashdata("user_registered")."</p>";
+ endif;?>
+
+<?php if($this->session->flashdata("post_created")): 
+    echo "<p class='mt-2 alert alert-success'>".$this->session->flashdata("post_created")."</p>";
+ endif;?>
+
+ <?php if($this->session->flashdata("post_updated")): 
+    echo "<p class='mt-2 alert alert-success'>".$this->session->flashdata("post_updated")."</p>";
+ endif;?>
+
+<?php if($this->session->flashdata("post_deleted")): 
+    echo "<p class='mt-2 alert alert-success'>".$this->session->flashdata("post_deleted")."</p>";
+ endif;?>
+
+ <?php if($this->session->flashdata("category_created")): 
+    echo "<p class='mt-2 alert alert-success'>".$this->session->flashdata("category_created")."</p>";
+ endif;?>
