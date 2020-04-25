@@ -11,13 +11,15 @@
             <div class="post-body">
                 <p><?php echo $post['body']; ?></p>
             </div>
-            
+
+            <?php if($this->session->userdata("user_id") == $post['user_id']): ?>
             <div class="d-flex">
                 <a href="<?php echo base_url()."posts/edit/".$post['slug']; ?>"  class="btn btn-secondary mr-3">Edit</a>
                 <?php echo form_open("posts/delete/".$post['id']) ?>
                     <input type="submit" value="Delete" class="btn btn-danger">
                 </form>
             </div>
+            <?php endif;?>
         </div>
     </div>
 

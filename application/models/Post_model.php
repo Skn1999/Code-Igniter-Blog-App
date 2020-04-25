@@ -25,6 +25,7 @@ class Post_model extends CI_Model{
             "slug" => $slug,
             "body" => $this->input->post('body'),
             "category_id" => $this->input->post("category"),
+            "user_id" => $this->session->userdata("user_id"),
             "poster_image" => $poster_image,
         );
 
