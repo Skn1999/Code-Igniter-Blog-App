@@ -81,3 +81,7 @@
  <?php if($this->session->flashdata("logged_out")): 
     echo "<p class='mt-2 alert alert-success'>".$this->session->flashdata("logged_out")."</p>";
  endif;?>
+
+ <?php if($this->session->flashdata("category_deleted")): 
+    echo "<p class='mt-2 alert alert-success'>".$this->session->flashdata("category_deleted")."</p>";
+ endif;?>

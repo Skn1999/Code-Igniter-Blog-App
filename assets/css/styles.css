@@ -8,3 +8,15 @@
     margin: 3px 0;
     display: block;
 }
+
+.pagination-links{
+    margin: 30px 0;
+}
+
+.pagination-links strong,
+a.pagination-link{
+    padding: 8px 13px;
+    margin: 5px;
+    background: #f4f4f4;
+    border: 1px solid #ccc;  
+}

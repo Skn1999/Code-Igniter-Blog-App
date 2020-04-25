@@ -33,6 +33,19 @@
             }
         }
 
+        public function delete($category_id){
+            if(!$this->session->userdata("logged_in")){
+                redirect("users/login");
+            }
+
+
+            $this->category_model->delete_category($category_id);
+
+            $this->session->set_flashdata("category_deleted","Category Deleted");
+
+            redirect('categories');
+        }
+
         public function posts($id){
             $data['title'] = $this->category_model->get_category($id)->name;
 
